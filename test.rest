@@ -5,9 +5,9 @@ POST http://localhost:3000/article
 Content-Type: application/json
 
 {
-  "title": "House chores ",
+  "title": "House chores 2",
   "content": "Do laundry, Wash dishes1, Sweep the yard, Iron clothes",
-  "author": "Me"
+  "author": "Me and you"
 }
 
 

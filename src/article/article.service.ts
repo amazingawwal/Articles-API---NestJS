@@ -20,8 +20,16 @@ export class ArticleService {
   private articles: Articles[] = []
 
   create(createArticleDto: CreateArticleDto) {
-    this.articles.push(createArticleDto)
-    // return 'This action adds a new article';
+
+    let idList = this.articles.map((article) => (article.id ?? 0))
+    let id = idList.length? Math.max(...idList) + 1 : 1;
+    let title = createArticleDto.title;
+    let content = createArticleDto.content;
+    let author = createArticleDto.author ;
+    let createdAt = new Date();
+    let updatedAt = new Date()
+
+    this.articles.push({id, title, content, author, createdAt, updatedAt})
     console.log(this.articles)
   }
 
