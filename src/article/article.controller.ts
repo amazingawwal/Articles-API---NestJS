@@ -9,8 +9,14 @@ export class ArticleController {
 
   @Post()
   create(@Body() createArticleDto: CreateArticleDto) {
-    return this.articleService.create(createArticleDto);
+    this.articleService.create(createArticleDto)
+    return createArticleDto;  
   }
+
+  // @Post()
+  // create(@Request() request: Request) {
+  //   return request.body
+  // }
 
   @Get()
   findAll() {

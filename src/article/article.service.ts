@@ -1,15 +1,32 @@
 import { Injectable } from '@nestjs/common';
 import { CreateArticleDto } from './dto/create-article.dto';
 import { UpdateArticleDto } from './dto/update-article.dto';
+import Articles from './interfaces/article.interface';
+
+// interface Articles {
+//     id ?: number // unique identifier
+//     title : string // - article title
+//     content : string // - article body content
+//     author : string // - author name
+//     createdAt ? : Date  //- creation timestamp
+//     updatedAt ? : Date  // last update timestamp
+// }
+
+
 
 @Injectable()
 export class ArticleService {
+
+  private articles: Articles[] = []
+
   create(createArticleDto: CreateArticleDto) {
-    return 'This action adds a new article';
+    this.articles.push(createArticleDto)
+    // return 'This action adds a new article';
+    console.log(this.articles)
   }
 
   findAll() {
-    return `This action returns all article`;
+    return this.articles;
   }
 
   findOne(id: number) {
