@@ -1,0 +1,15 @@
+GET http://localhost:3000/article HTTP/1.1
+
+###
+POST http://localhost:3000/article
+Content-Type: application/json
+
+{
+  "title": "House chores ",
+  "content": "Do laundry, Wash dishes1, Sweep the yard, Iron clothes",
+  "author": "Me"
+}
+
+
+
+
