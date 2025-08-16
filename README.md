@@ -1,14 +1,14 @@
-# NestJS Cats API
+# NestJS Articles API
 
 A simple **NestJS** project demonstrating a CRUD API using Controllers, Services, DTOs, and Modules.  
-This project exposes endpoints for managing a list of cats.
+This project exposes endpoints for managing a Articles.
 
 ---
 
 ## Features
 - NestJS framework with TypeScript
-- CRUD operations for a `Cat` resource
-- DTO validation with `class-validator`
+- CRUD operations for Article resource
+- DTO validation 
 - REST client testing using `test.rest` file
 
 ---
