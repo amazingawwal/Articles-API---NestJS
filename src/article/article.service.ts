@@ -60,6 +60,8 @@ export class ArticleService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} article`;
+    // return `This action removes a #${id} article`;
+    const updatedArticle = this.articles.filter(article => article.id !== id)
+    console.log(updatedArticle)
   }
 }

@@ -5,9 +5,9 @@ POST http://localhost:3000/article
 Content-Type: application/json
 
 {
-  "title": "House chores 3",
+  "title": "House chores 1",
   "content": "Do laundry, Wash dishes1, Sweep the yard, Iron clothes",
-  "author": "Me, you and them"
+  "author": "Me"
 }
 
 
@@ -17,7 +17,7 @@ GET http://localhost:3000/article/1 HTTP/1.1
 
 
 ###
-PATCH http://localhost:3000/article/1 HTTP/1.1
+PATCH http://localhost:3000/article/3 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -27,5 +27,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/article/1 HTTP/1.1
+DELETE http://localhost:3000/article/2 HTTP/1.1
 
