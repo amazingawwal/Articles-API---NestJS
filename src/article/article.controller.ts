@@ -13,10 +13,6 @@ export class ArticleController {
     return createArticleDto;  
   }
 
-  // @Post()
-  // create(@Request() request: Request) {
-  //   return request.body
-  // }
 
   @Get()
   findAll() {

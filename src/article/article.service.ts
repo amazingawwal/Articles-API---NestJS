@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateArticleDto } from './dto/create-article.dto';
 import { UpdateArticleDto } from './dto/update-article.dto';
 import Articles from './interfaces/article.interface';
+import { error } from 'console';
 
 // interface Articles {
 //     id ?: number // unique identifier
@@ -38,11 +39,24 @@ export class ArticleService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} article`;
+    // return `This action returns a #${id} article`;
+    return this.articles.find(article => article.id === id)
   }
 
   update(id: number, updateArticleDto: UpdateArticleDto) {
-    return `This action updates a #${id} article`;
+    // return `This action updates a #${id} article`;
+    let article = this.articles.find(article => article.id === id);
+    if (!article) {
+      throw error
+    }
+    article.title = updateArticleDto.title;
+    article.content = updateArticleDto.content;
+    article.author = updateArticleDto.author;
+    article.updatedAt = new Date();
+
+    console.log(article)
+    // const updatedArticle = {...article}
+    // console.log(updatedArticle)
   }
 
   remove(id: number) {
