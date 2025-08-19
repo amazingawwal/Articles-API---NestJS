@@ -1,7 +1,7 @@
 # NestJS Articles API
 
 A simple **NestJS** project demonstrating a CRUD API using Controllers, Services, DTOs, and Modules.  
-This project exposes endpoints for managing a Articles.
+This project exposes endpoints for managing Articles.
 
 ---
 
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 {
   "title": "Getting Started with Python for Web App",
-  "content": "This is an intermediate lectures to Django framework...",
+  "content": "This is an intermediate lecture on Django framework...",
   "author": "John Doe"
 }
 
