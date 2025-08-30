@@ -84,4 +84,4 @@ This project includes a test.rest file for use with the REST Client VS Code exte
 - View the response in the editor.
 
 
-Built with love by yours truly @amazingAwwal
+Built with ❤️ by yours truly @amazingAwwal
