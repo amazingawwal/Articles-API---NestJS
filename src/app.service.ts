@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Session } from '@nestjs/common';
 
 const username = 'admin';
 const password = 'admin1234'
@@ -9,8 +9,10 @@ export class AppService {
     return 'Hello, Welcome to my Blog!';
   }
 
-  login(loginUSername: string, loginPassword: string){
+  login(@Session() session: Record<string, any>,
+    loginUSername: string, loginPassword: string){
     if(loginUSername === username && loginPassword === password){
+      session.user = { username, role: 'admin' };
       return{
         'status': "logged in",
         'message': "login successful"
