@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Session } from '@nestjs/common';
 import { AppService } from './app.service';
 import { LoginDto } from './article/dto/login.dto';
 
@@ -12,8 +12,10 @@ export class AppController {
   }
 
   @Post("/login")
-  login(@Body() loginDto: LoginDto){
-    return this.appService.login(loginDto.username, loginDto.password);
+  login(@Body() loginDto: LoginDto,
+  @Session() session: Record<string, any>
+){
+    return this.appService.login(loginDto.username, loginDto.password, session);
   }
 }
 
