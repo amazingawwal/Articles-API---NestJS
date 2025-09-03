@@ -22,6 +22,7 @@ export class ArticleController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
+    // if(session.user)
     return this.articleService.findOne(+id);
   }
 

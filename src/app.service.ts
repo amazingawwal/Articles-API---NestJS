@@ -13,6 +13,7 @@ export class AppService {
     loginUSername: string, loginPassword: string, session: Record<string, any>){
     if(loginUSername === username && loginPassword === password){
       session.user = { username, role: 'admin' };
+      console.log(`SESSION: ${session} and USER:${session.user.username} and lastly ROLE:${session.user.role}`)
       return{
         'status': "logged in",
         'message': "login successful"
